@@ -47,7 +47,7 @@ class App extends React.Component {
           <AnimatedSwitch
             atEnter={{ opacity: 0, top: 200}}
             atLeave={{ opacity: 0}}
-            atActive={{ opacity: 1}}
+            atActive={{ opacity: 1, top: 0}}
             className={styles.switchWrapper}   
           >
             <Route exact path='/' component={Home} />
