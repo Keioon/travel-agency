@@ -18,8 +18,8 @@ export const getFilteredTrips = ({trips, filters}) => {
   }
 
   // TODO - filter by tags
-  if(filters.tag){
-    for(let tag of filters.tag){
+  if(filters.tags){
+    for(let tag of filters.tags){
       output = output.filter((trip) => trip.tags.includes(tag));
     }
   }
