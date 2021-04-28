@@ -14,6 +14,7 @@ const initialState = {
   filters: {
     searchPhrase: '',
     tags: [],
+    //cost: {},
     duration: {
       from: 1,
       to: 14,
