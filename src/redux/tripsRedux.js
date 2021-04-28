@@ -25,13 +25,12 @@ export const getFilteredTrips = ({trips, filters}) => {
   }
 
   // TODO - sort by cost descending (most expensive goes first)
-  /*for(let trip of trips){
-    if(filters.cost > trip.cost){
-      let lesExTrip = trip;
-      trip = 
-      
-    } 
-  }*/
+  /*output = output.sort((tripFirst, tripSecond) => 
+  if(tripFirst.cost > tripSecond.cost){
+    let zm = tripFirst;
+    tripFirst = tripSecond; 
+    tripSecond = zm;
+  });*/
 
   return output;
 };
