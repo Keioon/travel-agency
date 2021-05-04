@@ -15,11 +15,6 @@ class TripListOptions extends React.Component {
     }
   }
 
-  /* handleDisplayOrder(value){
-    console.log('cost od trip: ', value);
-    if(this.props.)
-  }*/
-
   handleDuration(type, value){
     console.log('Changing duration', type, value);
     // TODO - use action dispatcher from props
@@ -90,7 +85,6 @@ TripListOptions.propTypes = {
   addingTag: PropTypes.func,
   changeDurationTimeFrom: PropTypes.func,
   changeDurationTimeTo: PropTypes.func,
-  //changeOrderDisplay: PropTypes.func,
 };
 
 export default TripListOptions;

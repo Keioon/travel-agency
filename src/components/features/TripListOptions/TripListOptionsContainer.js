@@ -14,7 +14,6 @@ const mapDispatchToProps = dispatch => ({
   removingTag: tags => dispatch(removingTag(tags)),
   changeDurationTimeTo: duration => dispatch(changeDurationTimeTo(duration)),
   changeDurationTimeFrom: duration => dispatch(changeDurationTimeFrom(duration)),
-  //changeDisplayOrder: cost => dispatch(changeDisplayOrder(cost)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TripListOptions);
