@@ -26,8 +26,19 @@ describe('Component TripSummary', () => {
     const expectedCost = '100';
     const component = shallow(<TripSummary image={'image'} tags={[]} name={expectedName} cost={expectedCost} days={1} id={'id'} />);
     expect(component.find('.title').text()).toEqual(expectedName);
-    //expect(component.find('.details').text()).toEqual(`${expectedDays} daysfrom ${expectedCost}`);
+    //expect(component.find('.details').text()).toEqual(`${expectedDays} daysfrom ${expectedCost}`);  first method and on bottom second
     expect(component.find('.details span').first().text()).toEqual(`${expectedDays} days`);
     expect(component.find('.details span').last().text()).toEqual(`from ${expectedCost}`);
+  });
+  it('should render three tags', () => {
+    const expectedTags = ['tag1', 'tag2', 'tag3'];
+    const component = shallow(<TripSummary image={'image'} tags={expectedTags} name={'name'} cost={'cost'} days={1} id={'id'} />);
+    expect(component.find('.tags span').at(0).text()).toEqual(expectedTags[0]);
+    expect(component.find('.tags span').at(1).text()).toEqual(expectedTags[1]);
+    expect(component.find('.tags span').at(2).text()).toEqual(expectedTags[2]);
+  });
+  it('should not render tags if props tags is false', () => {
+    const component = shallow(<TripSummary image={'image'} tags={['tag1', 'tag2', 'tag3']} name={'name'} cost={'cost'} days={1} id={'id'} />);
+    expect(component.find('.tags div').exists()).toBe(false);
   });
 });
