@@ -22,7 +22,6 @@ OrderForm.propTypes = {
   options: PropTypes.object,
   tripCost: PropTypes.string,
   setOrderOption: PropTypes.func,
-  name: PropTypes.string,
 };
 
 export default OrderForm;
